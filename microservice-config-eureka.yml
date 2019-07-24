@@ -1,40 +1,40 @@
-#×¢Òâ£ºÈç¹ûÔÚ¼ÇÊÂ±¾ÉÏ±àĞ´£¬ÏÂÃæµÄËõ½ø²»ÒªÊ¹ÓÃTabÀ´Ëõ½ø£¬²»È»±¨´í
+ï»¿#æ³¨æ„ï¼šå¦‚æœåœ¨è®°äº‹æœ¬ä¸Šç¼–å†™ï¼Œä¸‹é¢çš„ç¼©è¿›ä¸è¦ä½¿ç”¨Tabæ¥ç¼©è¿›ï¼Œä¸ç„¶æŠ¥é”™
 spring:
   profiles:
-    active: dev # ¼¤»î¿ª·¢»·¾³ÅäÖÃ
+    active: dev # æ¿€æ´»å¼€å‘ç¯å¢ƒé…ç½®
 
 ---
 server:
-  port: 6001    #  ·şÎñ¶Ë¿Ú
+  port: 6001    #  æœåŠ¡ç«¯å£
 spring:
-  profiles: dev # ¿ª·¢»·¾³
+  profiles: dev # å¼€å‘ç¯å¢ƒ
   application:
     name: microservice-config-eureka
 eureka:
   instance:
-    hostname: eureka6001.com   #  eureka·şÎñ¶ËµÄÊµÀıÃû³Æ
+    hostname: eureka6001.com   #  eurekaæœåŠ¡ç«¯çš„å®ä¾‹åç§°
   client:
-    registerWithEureka: false  #  ·şÎñ×¢²á£¬false±íÊ¾²»½«×ÔÒÑ×¢²áµ½Eureka·şÎñÖĞ
-    fetchRegistry: false  #  ·şÎñ·¢ÏÖ£¬false±íÊ¾×Ô¼º²»´ÓEureka·şÎñÖĞ»ñÈ¡×¢²áĞÅÏ¢
-    serviceUrl:  # Eureka¿Í»§¶ËÓëEureka·şÎñ¶ËµÄ½»»¥µØÖ·£¬¼¯Èº°æÅäÖÃ¶Ô·½µÄµØÖ·£¬µ¥»ú°æÅäÖÃ×Ô¼º£¨Èç¹û²»ÅäÖÃÔòÄ¬ÈÏ±¾»ú8761¶Ë¿Ú£©
+    registerWithEureka: false  #  æœåŠ¡æ³¨å†Œï¼Œfalseè¡¨ç¤ºä¸å°†è‡ªå·²æ³¨å†Œåˆ°EurekaæœåŠ¡ä¸­
+    fetchRegistry: false  #  æœåŠ¡å‘ç°ï¼Œfalseè¡¨ç¤ºè‡ªå·±ä¸ä»EurekaæœåŠ¡ä¸­è·å–æ³¨å†Œä¿¡æ¯
+    serviceUrl:  # Eurekaå®¢æˆ·ç«¯ä¸EurekaæœåŠ¡ç«¯çš„äº¤äº’åœ°å€ï¼Œé›†ç¾¤ç‰ˆé…ç½®å¯¹æ–¹çš„åœ°å€ï¼Œå•æœºç‰ˆé…ç½®è‡ªå·±ï¼ˆå¦‚æœä¸é…ç½®åˆ™é»˜è®¤æœ¬æœº8761ç«¯å£ï¼‰
       defaultZone: http://eureka6001.com:6001/eureka/
   server:
-    enable-self-preservation: false  #  ½ûÓÃ×ÔÎÒ±£»¤Ä£Ê½
+    enable-self-preservation: false  #  ç¦ç”¨è‡ªæˆ‘ä¿æŠ¤æ¨¡å¼
 
 ---
 server:
-  port: 6001    #  ·şÎñ¶Ë¿Ú
+  port: 6001    #  æœåŠ¡ç«¯å£
 spring:
-  profiles: prod # ¿ª·¢»·¾³
+  profiles: prod # å¼€å‘ç¯å¢ƒ
   application:
     name: microservice-config-eureka
 eureka:
   instance:
-    hostname: eureka6001.com   #  eureka·şÎñ¶ËµÄÊµÀıÃû³Æ
+    hostname: eureka6001.com   #  eurekaæœåŠ¡ç«¯çš„å®ä¾‹åç§°
   client:
-    registerWithEureka: false  #  ·şÎñ×¢²á£¬false±íÊ¾²»½«×ÔÒÑ×¢²áµ½Eureka·şÎñÖĞ
-    fetchRegistry: false  #  ·şÎñ·¢ÏÖ£¬false±íÊ¾×Ô¼º²»´ÓEureka·şÎñÖĞ»ñÈ¡×¢²áĞÅÏ¢
-    serviceUrl:  # Eureka¿Í»§¶ËÓëEureka·şÎñ¶ËµÄ½»»¥µØÖ·£¬¼¯Èº°æÅäÖÃ¶Ô·½µÄµØÖ·£¬µ¥»ú°æÅäÖÃ×Ô¼º£¨Èç¹û²»ÅäÖÃÔòÄ¬ÈÏ±¾»ú8761¶Ë¿Ú£©
+    registerWithEureka: false  #  æœåŠ¡æ³¨å†Œï¼Œfalseè¡¨ç¤ºä¸å°†è‡ªå·²æ³¨å†Œåˆ°EurekaæœåŠ¡ä¸­
+    fetchRegistry: false  #  æœåŠ¡å‘ç°ï¼Œfalseè¡¨ç¤ºè‡ªå·±ä¸ä»EurekaæœåŠ¡ä¸­è·å–æ³¨å†Œä¿¡æ¯
+    serviceUrl:  # Eurekaå®¢æˆ·ç«¯ä¸EurekaæœåŠ¡ç«¯çš„äº¤äº’åœ°å€ï¼Œé›†ç¾¤ç‰ˆé…ç½®å¯¹æ–¹çš„åœ°å€ï¼Œå•æœºç‰ˆé…ç½®è‡ªå·±ï¼ˆå¦‚æœä¸é…ç½®åˆ™é»˜è®¤æœ¬æœº8761ç«¯å£ï¼‰
       defaultZone: http://eureka6001.com:6001/eureka/
   server:
-    enable-self-preservation: false  #  ½ûÓÃ×ÔÎÒ±£»¤Ä£Ê½
+    enable-self-preservation: false  #  ç¦ç”¨è‡ªæˆ‘ä¿æŠ¤æ¨¡å¼
